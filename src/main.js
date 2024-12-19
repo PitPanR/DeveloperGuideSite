@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import Buefy from 'buefy';
+import 'buefy/dist/buefy.css';
+import router from '/src/router/index.js'
 
-createApp(App).mount('#app')
+
+const app = createApp(App);
+app.use(router).use(Buefy).mount('#app')
