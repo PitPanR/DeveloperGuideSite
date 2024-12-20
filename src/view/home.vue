@@ -1,19 +1,22 @@
 <template>
   <div class="home-back">
-    <div class="left-nav">
-      <Menu />
-    </div>
-    <div class="content"></div>
+    <el-container>
+      <el-aside class="left-nav">
+        <Menu />
+      </el-aside>
+      <el-main class="content">
+
+      </el-main>
+    </el-container>
   </div>
 </template>
 <script setup>
-  import DocumentPage from "./documentPage/index.vue";
   import Menu from "./menu/index.vue";
 </script>
 <style scoped>
   .home-back {
-    width: 90vw; /* 调整宽度为视口宽度 */
-    height: 90vh; /* 或者其他高度 */
+    width: 80vw; /* 调整宽度为视口宽度 */
+    height: 80vh; /* 或者其他高度 */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,19 +24,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: red;
   }
   .left-nav{
     float: left;
-    width: 20vw;
-    height: 90vh;
-    position: absolute;
+    width: 15vw;
+    height: 80vh;
+    background: purple;
+    padding: 20px 0 20px 20px;
     left: 0;
   }
   .content{
-    width: 70vw;
-    position: absolute;
-    height: 90vh;
+    width: 65vw;
+    height: 80vh;
     left: 20vw;
-    padding: 100px 100px 100px 100px;
+    background: green;
+    padding: 20px 20px 20px 20px;
   }
 </style>
